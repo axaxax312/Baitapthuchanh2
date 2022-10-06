@@ -1,0 +1,8 @@
+C:\Users\LINH\Desktop\nguyên\NETCORE\HoTrungNguyenBTTH2\obj\Debug\net6.0\HoTrungNguyenBTTH2.csproj.AssemblyReference.cache
+C:\Users\LINH\Desktop\nguyên\NETCORE\HoTrungNguyenBTTH2\obj\Debug\net6.0\HoTrungNguyenBTTH2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LINH\Desktop\nguyên\NETCORE\HoTrungNguyenBTTH2\obj\Debug\net6.0\HoTrungNguyenBTTH2.AssemblyInfoInputs.cache
+C:\Users\LINH\Desktop\nguyên\NETCORE\HoTrungNguyenBTTH2\obj\Debug\net6.0\HoTrungNguyenBTTH2.AssemblyInfo.cs
+C:\Users\LINH\Desktop\nguyên\NETCORE\HoTrungNguyenBTTH2\obj\Debug\net6.0\HoTrungNguyenBTTH2.csproj.CoreCompileInputs.cache
+C:\Users\LINH\Desktop\nguyên\NETCORE\HoTrungNguyenBTTH2\obj\Debug\net6.0\HoTrungNguyenBTTH2.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\LINH\Desktop\nguyên\NETCORE\HoTrungNguyenBTTH2\obj\Debug\net6.0\HoTrungNguyenBTTH2.RazorAssemblyInfo.cache
+C:\Users\LINH\Desktop\nguyên\NETCORE\HoTrungNguyenBTTH2\obj\Debug\net6.0\HoTrungNguyenBTTH2.RazorAssemblyInfo.cs
