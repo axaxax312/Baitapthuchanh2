@@ -1,0 +1,26 @@
+@model HoTrungNguyenBTTH2.Models.Person
+@{
+    ViewData["Title"] = "Edit";
+}
+<h4>Sua thong tin Sinh vien</h4>
+<hr >
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="PersonName" />
+            <div class="form-group">
+                <label asp-for="PersonAge" class="control-label"></label>
+                <input asp-for="PersonAge" class="form-control" />
+                <span asp-validation-for="PersonAge" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                <a class="btn btn-success" asp-action="Index">Danh sach moi nguoi</a>
+            </div>
+        </form>
+    </div>
+</div>
+@section Scripts{
+    @{await Html.RenderPartialAsync("_ValidatuonScriptsPartial");}
+}

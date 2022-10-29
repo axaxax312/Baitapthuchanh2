@@ -1,0 +1,21 @@
+@model HoTrungNguyenBTTH2.Models.Customer
+@{
+    ViewData["Title"]="Delete";
+}
+<h3>Ban co muon xoa thong tin khach hang?</h3>
+<div>
+    <hr />
+    <dl>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CustomerName):
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CustomerName)
+        </dd>
+    </dl>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="CustomerID"/>
+        <input type="submit" value="Delete" class="btn btn-danger" /> 
+        <a class="btn btn-success" asp-action="Index">Danh sach Khach hang</a>
+    </form>
+</div>

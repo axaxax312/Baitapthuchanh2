@@ -5,16 +5,16 @@ using Microsoft.EntityFrameworkCore;
 
 namespace HoTrungNguyenBTTH2.Controllers
 {
-    public class StudentController : Controller
+    public class PersonController : Controller
     {
         private readonly ApplicationDbContext _context;
-        public StudentController (ApplicationDbContext context)
+        public PersonController (ApplicationDbContext context)
         {
             _context = context;
         }
         public async Task<IActionResult>Index()
         {
-            var model = await _context.Students.ToListAsync();
+            var model = await _context.Persons.ToListAsync();
             return View(model);
         }
         public IActionResult Create()
@@ -22,7 +22,7 @@ namespace HoTrungNguyenBTTH2.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Create(Student std)
+        public async Task<IActionResult> Create(Person std)
         {
             if(ModelState.IsValid)
             {
@@ -32,32 +32,32 @@ namespace HoTrungNguyenBTTH2.Controllers
             }
             return View(std);
         }
-        //kiem tra sinh vien co ton tai khong
-        private bool StudentExists(String id)
+        //kiem tra Person co ton tai khong
+        private bool PersonExists(String name)
         {
-            return _context.Students.Any(e => e.StudentID == id);
+            return _context.Persons.Any(e => e.PersonName == name);
         }
         //kiem tra xem id cua sinh vien co ton tai trong csdl? Co tra ve view "Edit"
-        public async Task<IActionResult> Edit(string id)
+        public async Task<IActionResult> Edit(string name)
         {
-            if(id == null)
+            if(name == null)
             {
                 return NotFound();
             }
-            var student = await _context.Students.FindAsync(id);
-            if(student == null)
+            var person = await _context.Persons.FindAsync(name);
+            if(person == null)
             {
                 return NotFound();
 
             }
-            return View(student);
+            return View(person);
         }
-        //Phuong thuc edit cap nhap thong tin sinh vien theo ma sinhvien
+        //Phuong thuc edit cap nhap thong tin nguoi theo ma ten
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("StudentID,StudentName")] Student std)
+        public async Task<IActionResult> Edit(string id, [Bind("PersonAge,PersonName")] Person std)
         {
-            if(id != std.StudentID)
+            if(id != std.PersonName)
                 return NotFound();
             if(ModelState.IsValid)
             {
@@ -67,7 +67,7 @@ namespace HoTrungNguyenBTTH2.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if(!StudentExists(std.StudentID))
+                    if(!PersonExists(std.PersonName))
                     {
                         return NotFound();
                     }
@@ -80,14 +80,14 @@ namespace HoTrungNguyenBTTH2.Controllers
             }
             return View(std);
         }
-        //Phuong thuc delete Kiem tra id. Co tra ve view Delete
+        //Phuong thuc delete Kiem tra . Co tra ve view Delete
         public async Task<IActionResult> Delete(string id)
         {
             if(id == null)
             {
                 return NotFound();
             }
-            var std = await _context.Students.FirstOrDefaultAsync(m => m.StudentID == id);
+            var std = await _context.Persons.FirstOrDefaultAsync(m => m.PersonName == id);
             if (std == null)
                 return NotFound();
             return View(std);    
@@ -97,8 +97,8 @@ namespace HoTrungNguyenBTTH2.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
-            var std = await _context.Students.FindAsync(id);
-            _context.Students.Remove(std);
+            var std = await _context.Persons.FindAsync(id);
+            _context.Persons.Remove(std);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }

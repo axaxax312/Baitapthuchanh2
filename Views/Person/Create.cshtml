@@ -1,0 +1,25 @@
+@model HoTrungNguyenBTTH2.Models.Person
+<h1>Tao moi 1 nguoi</h1>
+<hr>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PersonAge" class="controle-label"></label>
+                <input asp-for="PersonAge" class="form-control">
+                <span asp-validation-for="PersonAge" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PersonName" class="control-label"></label>
+                <input asp-for="PersonName" class="form-control">
+                <span asp-validation-for="PersonName" class="text-danger"></span>
+            </div>
+            <br>
+            <div clas="form-group">
+                <input class="btn btn-primary" type="submit" value="Save">
+                <a class="btn btn-success" asp-action="Index">Danh sach moi nguoi</a>
+            </div>
+        </form>
+    </div>
+</div>
