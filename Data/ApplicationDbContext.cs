@@ -13,6 +13,6 @@ namespace HoTrungNguyenBTTH2.Data{
         public DbSet<Customer> Customers {get;set;}
         public DbSet<Student> Students {get;set;}
         public DbSet<Person> Persons {get;set;}
-       
+        public DbSet<Employee> Employee {get;set;}
     }
 }

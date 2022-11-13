@@ -265,3 +265,7 @@ C:\Users\LINH\Desktop\nguyên\NETCORE\HoTrungNguyenBTTH2\obj\Debug\net6.0\refint
 C:\Users\LINH\Desktop\nguyên\NETCORE\HoTrungNguyenBTTH2\obj\Debug\net6.0\HoTrungNguyenBTTH2.pdb
 C:\Users\LINH\Desktop\nguyên\NETCORE\HoTrungNguyenBTTH2\obj\Debug\net6.0\HoTrungNguyenBTTH2.genruntimeconfig.cache
 C:\Users\LINH\Desktop\nguyên\NETCORE\HoTrungNguyenBTTH2\obj\Debug\net6.0\ref\HoTrungNguyenBTTH2.dll
+C:\Users\LINH\Desktop\nguyên\NETCORE\HoTrungNguyenBTTH2\bin\Debug\net6.0\EPPlus.dll
+C:\Users\LINH\Desktop\nguyên\NETCORE\HoTrungNguyenBTTH2\bin\Debug\net6.0\EPPlus.Interfaces.dll
+C:\Users\LINH\Desktop\nguyên\NETCORE\HoTrungNguyenBTTH2\bin\Debug\net6.0\EPPlus.System.Drawing.dll
+C:\Users\LINH\Desktop\nguyên\NETCORE\HoTrungNguyenBTTH2\bin\Debug\net6.0\Microsoft.IO.RecyclableMemoryStream.dll
